@@ -17,16 +17,13 @@ class AlienInvasion:
 
         self.ship = Ship(self)
 
-        # Set the background color
-        self.bg_color = (230, 230, 230)
-
     def run_game(self):
         """Start the main loop for the game."""
         while True:
             self._check_events()
             self._update_screen()
 
-    def _check_events(self):
+    def _check_events(self):  # may be a static method
         """Respond to keypresses and mouse events"""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
